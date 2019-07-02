@@ -18,11 +18,11 @@ package com.philliphsu.bottomsheetpickers.time.numberpad;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.support.annotation.CallSuper;
-import android.support.annotation.ColorInt;
-import android.support.annotation.LayoutRes;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.GridLayout;
+import androidx.annotation.CallSuper;
+import androidx.annotation.ColorInt;
+import androidx.annotation.LayoutRes;
+import androidx.core.content.ContextCompat;
+import androidx.gridlayout.widget.GridLayout;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;

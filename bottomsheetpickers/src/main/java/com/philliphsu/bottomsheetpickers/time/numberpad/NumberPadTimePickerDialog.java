@@ -17,9 +17,9 @@
 package com.philliphsu.bottomsheetpickers.time.numberpad;
 
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.annotation.StringRes;
-import android.support.design.widget.FloatingActionButton;
+import androidx.annotation.ColorInt;
+import androidx.annotation.StringRes;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
