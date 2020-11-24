@@ -1,10 +1,13 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.nate-eisner'
 
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'bottom-sheet-pickers'
 
-    publishedGroupId = 'com.philliphsu'
+    publishedGroupId = 'com.github.nate-eisner'
     libraryName = 'BottomSheetPickers'
     artifact = 'bottomsheetpickers'
 
@@ -13,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/philliphsu/BottomSheetPickers'
     gitUrl = 'https://github.com/philliphsu/BottomSheetPickers.git'
 
-    libraryVersion = '2.3.0'
+    libraryVersion = project.ext.versionName
 
     developerId = 'philliphsu'
     developerName = 'Phillip Hsu'
@@ -25,15 +28,14 @@ ext {
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
-        versionCode 5
-        versionName "2.3.0"
-        vectorDrawables.useSupportLibrary = true
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
     }
     buildTypes {
         release {
@@ -45,9 +47,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
 }
 
 apply from: '../install.gradle'
